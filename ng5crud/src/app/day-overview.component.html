@@ -1,0 +1,45 @@
+
+
+<div>
+    <fieldset>
+        <label>Name:
+          <input [(ngModel)]="employee.name">
+        </label>
+      </fieldset>
+
+  <!-- <ul>
+    <li *ngFor="let customer of customers">
+      <h1>{{customer.name}}</h1>
+      <p>
+        <i>{{customer.name}}</i> is in the {{customer.address.region}} region.</p>
+      <fieldset>
+        <label>Name:
+          <input [(ngModel)]="customer.name">
+        </label>
+      </fieldset>
+
+      <label>
+        <input type="checkbox" [(ngModel)]="hideAddress">Hide Address</label>
+      <br/>
+
+      <div *ngIf="hideAddress">
+
+        <fieldset>
+          <label>City:
+            <input [(ngModel)]="customer.address.city"> </label>
+        </fieldset>
+        <fieldset>
+          <label>Street:
+            <input [(ngModel)]="customer.address.street"> </label>
+        </fieldset>
+        <fieldset>
+          <label>Region: </label>
+          <select [(ngModel)]="customer.address.region">
+            <option *ngFor="let region of regions"></option>
+          </select>
+        </fieldset>
+      </div>
+    </li>
+  </ul> -->
+
+</div>
