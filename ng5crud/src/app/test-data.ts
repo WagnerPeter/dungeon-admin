@@ -6,7 +6,8 @@ export function createTestEmployee() {
         shiftEnd: null,
 
         amountConsumed: 0,
-        role: 'shiftManager'
+        role: { name: 'shiftManager'},
+        phoneNumber: '0905 504 335'
     }
 }
 

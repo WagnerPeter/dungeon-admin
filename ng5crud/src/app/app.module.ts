@@ -12,6 +12,7 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 
 import { appRoutes } from './routerConfig';
+import { DataService } from './data-service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { appRoutes } from './routerConfig';
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

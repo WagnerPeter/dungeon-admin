@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { DayOverview } from './model';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from "./data-service";
+import { DayOverview, Employee } from './model';
 
 @Component({
     moduleId: module.id,
@@ -8,6 +9,16 @@ import { DayOverview } from './model';
     styleUrls: ['day-overview.component.css']
 })
 
-export class DayOverviewComponent {
+export class DayOverviewComponent implements OnInit {
    
+    employee: Employee;
+
+    constructor(private dataService: DataService) { }
+
+    //lifecycle goes here
+    ngOnInit() {
+        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+        //Add 'implements OnInit' to the class.
+        this.employee = this.dataService.getEmployee();
+    }
 }
