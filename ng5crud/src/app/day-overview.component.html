@@ -1,45 +1,30 @@
 
 
 <div>
-    <fieldset>
+    <!-- <fieldset>
         <label>Name:
-          <input [(ngModel)]="employee.name">
+          <input [(ngModel)]="dayOverview.employees">
         </label>
-      </fieldset>
-
-  <!-- <ul>
-    <li *ngFor="let customer of customers">
-      <h1>{{customer.name}}</h1>
-      <p>
-        <i>{{customer.name}}</i> is in the {{customer.address.region}} region.</p>
-      <fieldset>
-        <label>Name:
-          <input [(ngModel)]="customer.name">
-        </label>
-      </fieldset>
-
-      <label>
-        <input type="checkbox" [(ngModel)]="hideAddress">Hide Address</label>
-      <br/>
-
-      <div *ngIf="hideAddress">
-
-        <fieldset>
-          <label>City:
-            <input [(ngModel)]="customer.address.city"> </label>
-        </fieldset>
-        <fieldset>
-          <label>Street:
-            <input [(ngModel)]="customer.address.street"> </label>
-        </fieldset>
-        <fieldset>
-          <label>Region: </label>
-          <select [(ngModel)]="customer.address.region">
-            <option *ngFor="let region of regions"></option>
-          </select>
-        </fieldset>
-      </div>
+      </fieldset> -->
+  <p *ngIf="isBusy">Nacitavam</p>
+  <ul *ngIf="dayOverview">
+    <h2>Zapisany zamestnanci</h2>
+    <li *ngFor="let employee of dayOverview.employees">
+      <label>{{employee.name}}</label> <br/>
+      <i>Planovany zaciatok smeny: {{employee.plannedShiftStart | date:'shortTime' }}</i>  
     </li>
-  </ul> -->
+
+    <h2>Dnesne eventy</h2>
+    <li *ngFor="let event of dayOverview.events">
+      <label>{{event.name}}</label>  <br/>
+      <label>Povinnosti</label>  
+      <ul>
+        <li *ngFor="let task of event.tasks">
+          {{task}}
+        </li>
+      </ul>
+
+    </li>
+  </ul>
 
 </div>

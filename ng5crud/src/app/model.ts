@@ -3,6 +3,8 @@ export class Employee {
     id: number;
     name: string;
 
+    plannedShiftStart: Date;
+
     shiftStart: Date;
     shiftEnd: Date;
 
@@ -14,7 +16,7 @@ export class Employee {
 export class Event {
     id: number;
     name: string;
-    responsibilities: string[];
+    tasks: string[];
     date: Date; 
     
     organizers: Employee[];

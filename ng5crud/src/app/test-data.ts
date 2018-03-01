@@ -23,27 +23,32 @@ export function createTestDayOverview() {
             {
                 id: 5,
                 name: 'Adam Porteleky',
+                plannedShiftStart: new Date('March 3, 2018 13:00:00'),
                 shiftStart: null,
                 shiftEnd: null,
         
                 amountConsumed: 0,
-                role: 'shiftManager'
+                role: {name: 'shiftManager'},
+                phoneNumber: ''
             },
             {
                 id: 7,
                 name: 'Veronika Polakovicova',
+                plannedShiftStart: new Date('March 3, 2018 18:00:00'),
+
                 shiftStart: null,
                 shiftEnd: null,
         
                 amountConsumed: 0,
-                role: 'bartender'
+                role: { name: 'bartender'},
+                phoneNumber: ''
             }
         ],
         events: [
             {
                 id: 1,
                 name: 'Just Dance Party',
-                responsibilities: [
+                tasks: [
                     'Dať nabíjať ovládače MOVE playstation',
                     'vytvoriť tanečný parket (poposúvať stoly, posledný zrušiť)',
                     'Rezervačka na F3 pre organizátorov',
@@ -57,18 +62,20 @@ export function createTestDayOverview() {
                         name: 'Julli Tibenska',
                         shiftStart: null,
                         shiftEnd: null,
+                        plannedShiftStart: null,
                         phoneNumber: '+421 944 555 565',
                         amountConsumed: 0,
-                        role: 'eventManager'
+                        role: {name: 'eventManager'}
                     },
                     {
                         id: 10,
                         name: 'Jakub Rehak',
+                        plannedShiftStart: null,
                         shiftStart: null,
                         shiftEnd: null,
                         phoneNumber: '+421 944 111 353',
                         amountConsumed: 0,
-                        role: 'eventManager'
+                        role: {name: 'eventManager'}
                     }
                 ],
                 
