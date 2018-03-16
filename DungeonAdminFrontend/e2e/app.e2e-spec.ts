@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng5crud App', () => {
+describe('dungeon-admin App', () => {
   let page: AppPage;
 
   beforeEach(() => {

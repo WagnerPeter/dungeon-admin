@@ -10,7 +10,7 @@ import { DayOverview, Employee } from './model';
 })
 
 export class DayOverviewComponent implements OnInit {
-   
+    greeting: string;
     dayOverview: DayOverview;
     isBusy = false;
 
@@ -29,5 +29,10 @@ export class DayOverviewComponent implements OnInit {
             this.isBusy = false;
             console.log(errorMsg);
         });
+
+        this.dataService.sayHello().subscribe(result => {
+            this.greeting = result;
+        });
     }
+
 }

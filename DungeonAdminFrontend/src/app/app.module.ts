@@ -15,8 +15,8 @@ import { appRoutes } from './routerConfig';
 import { DataService } from './data.service';
 
 //only for development
-import { InMemoryDataService } from './in-memory-data.service';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './in-memory-data.service';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     BrowserModule,
     FormsModule,    
     RouterModule.forRoot(appRoutes),
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
     HttpClientModule,
     HttpModule
   ],

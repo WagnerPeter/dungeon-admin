@@ -14,6 +14,7 @@ import 'rxjs/add/operator/map';
 export class DataService {
     private dayOverviewUrl = 'api/dayOverview';
     private employeeUrl = 'api/employee';
+    private greetUrl = 'api/Hello'
 
     constructor(private http: Http) { }
 
@@ -35,6 +36,10 @@ export class DataService {
         //     }, 1000);
 
         // });
+    }
+
+    sayHello(): Observable<any> {
+        return this.http.get(this.greetUrl);
     }
 
     getDayOverview(): Observable<DayOverview> {
